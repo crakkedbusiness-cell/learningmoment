@@ -5,7 +5,7 @@ app.use(express.json())
 
 
 morgan.token('getBody', function getBody (req) {
-  return req.body.name
+  return req.body
 })
 
 app.use(morgan(':getBody :method :url :response-time'))
@@ -105,3 +105,4 @@ const PORT = 3001
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`)
 })
+
